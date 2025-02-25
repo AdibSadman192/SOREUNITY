@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/lib/dev-tools/jest.setup.ts'],
   moduleNameMapper: {
