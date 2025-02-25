@@ -1,6 +1,6 @@
-import { createClient } from '@/lib/supabase/server'
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server';
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 
 export default async function ShippingLayout({
   children,
@@ -12,10 +12,10 @@ export default async function ShippingLayout({
 
   const {
     data: { session },
-  } = await supabase.auth.getSession()
+  } = await supabase.auth.getSession();
 
   if (!session) {
-    redirect('/auth/signin')
+    redirect('/auth/signin');
   }
 
   return (
@@ -26,5 +26,5 @@ export default async function ShippingLayout({
         </div>
       </main>
     </div>
-  )
+  );
 }
